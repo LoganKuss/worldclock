@@ -11,8 +11,9 @@ class timeZones():
     def update(self):
         os.system("clear")
         chosen_tz = pytz.timezone(self.tz)
-        dt = datetime.now(chosen_tz).strftime("%H : %M : %S %p")
-        ff = figlet_format(f"{self.tz}: {dt}", width = 1900)
+        dt = datetime.now(chosen_tz).strftime("%A : %H : %M : %S %p")
+        print(f"{self.tz}: ")
+        ff = figlet_format(f"{dt}", width = 200)
         print(ff)
         sleep(1)
         self.update()
