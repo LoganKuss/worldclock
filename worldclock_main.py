@@ -19,7 +19,8 @@ class timeZones():
 
 
 def main():
-    tz = ["US/Eastern", "US/Central", "US/Mountain", "US/Pacific"]
+    tz = pytz.common_timezones
+    # tz = ["US/Eastern", "US/Central", "US/Mountain", "US/Pacific"]
     for i, time in enumerate(tz, start = 1):
         print(f"{i}: {time}")
 
